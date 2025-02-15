@@ -1,4 +1,4 @@
-# 🛠️ FastAPI Tool Rental API  
+# FastAPI Tool Rental API  
 
 This is a simple **Tool Rental API** built with **FastAPI** and **SQLite**.  
 Users can **add**, **rent**, **return**, and **view tools** using this API.  
