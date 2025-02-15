@@ -14,38 +14,38 @@ Users can **add**, **rent**, **return**, and **view tools** using this API.
 
 ## 🏗️ Installation  
 
-1️⃣ **Clone the repository**  
+### 1️⃣ Clone the repository  
 ```bash
 git clone https://github.com/your-repo/tool-rental-api.git
 cd tool-rental-api
-2️⃣ Create and activate a virtual environment (optional but recommended)
+```
 
-bash
-Copy
-Edit
+### 2️⃣ Create and activate a virtual environment (optional but recommended)  
+```bash
 python -m venv venv
 source venv/bin/activate  # On macOS/Linux
 venv\Scripts\activate  # On Windows
-3️⃣ Install dependencies
+```
 
-bash
-Copy
-Edit
+### 3️⃣ Install dependencies  
+```bash
 pip install -r requirements.txt
-⚡ Running the API
-bash
-Copy
-Edit
-uvicorn main:app --reload
-The API will be available at: http://127.0.0.1:8000
+```
 
-📌 API Endpoints
-🔍 Get Available Tools
-GET /tools
-Response: List of available tools
-json
-Copy
-Edit
+### ⚡ Running the API  
+```bash
+uvicorn main:app --reload
+```
+The API will be available at: **http://127.0.0.1:8000**
+
+---
+
+## 📌 API Endpoints  
+
+### 🔍 Get Available Tools  
+**GET /tools**  
+Response: List of available tools  
+```json
 [
   {
     "id": 1,
@@ -53,67 +53,64 @@ Edit
     "available": true
   }
 ]
-➕ Add a New Tool
-POST /tools
-Request Body:
-json
-Copy
-Edit
+```
+
+### ➕ Add a New Tool  
+**POST /tools**  
+Request Body:  
+```json
 {
   "name": "Drill"
 }
-Response:
-json
-Copy
-Edit
+```
+Response:  
+```json
 {
   "id": 2,
   "name": "Drill",
   "available": true
 }
-🔄 Rent a Tool
-POST /rent
-Request Body:
-json
-Copy
-Edit
+```
+
+### 🔄 Rent a Tool  
+**POST /rent**  
+Request Body:  
+```json
 {
   "tool_id": 1,
   "user_id": 101,
   "days": 5
 }
-Response:
-json
-Copy
-Edit
+```
+Response:  
+```json
 {
   "id": 1,
   "tool_id": 1,
   "user_id": 101,
   "days": 5
 }
-✅ Return a Tool
-POST /return
-Request Body:
-json
-Copy
-Edit
+```
+
+### ✅ Return a Tool  
+**POST /return**  
+Request Body:  
+```json
 {
   "tool_id": 1
 }
-Response:
-json
-Copy
-Edit
+```
+Response:  
+```json
 {
   "message": "Tool returned"
 }
-📂 Get All Rentals
-GET /rentals
-Response:
-json
-Copy
-Edit
+```
+
+### 📂 Get All Rentals  
+**GET /rentals**  
+Response:  
+```json
 [
   {
     "id": 1,
@@ -122,9 +119,15 @@ Edit
     "days": 5
   }
 ]
-🛠️ Tech Stack
-FastAPI 🚀 (Web framework)
-SQLite 🗄️ (Database)
-SQLAlchemy 🛢️ (ORM)
-Pydantic ✅ (Data validation)
-Uvicorn 🌐 (ASGI server)
+```
+
+---
+
+## 🛠️ Tech Stack  
+- **FastAPI** 🚀 (Web framework)  
+- **SQLite** 🗄️ (Database)  
+- **SQLAlchemy** 🛢️ (ORM)  
+- **Pydantic** ✅ (Data validation)  
+- **Uvicorn** 🌐 (ASGI server)  
+```
+
